@@ -8,7 +8,7 @@ public class Main {
 		arr[2] = new Circle(3, 4, 5);
 		Circle s = new Circle(1, 2, 5);
 		System.out.println(arr[1]);
-		//System.out.println(rec.calcArea());
+		System.out.println(arr[2].calcArea());
 	}
 
 }
