@@ -1,20 +1,31 @@
 
 public abstract class Shape {
-	private double x;
-	private double y;
+	protected String color;
+	protected Boolean filled;
 	Shape(){
-		x = 0;
-		y = 0;
+		color = "red";
+		filled = true;
 	}
-	Shape(double x, double y){
-		this.x = x;
-		this.y = y;
+	Shape(String color, Boolean filled){
+		this();
+		this.color = color;
+		this.filled = filled;
 	}
-	public double getX() {
-		return x;
+	public String getColor() {
+		return color;
 	}
-	public double getY() {
-		return y;
+	public Boolean isFilled() {
+		return filled;
 	}
-	public abstract double calcArea();
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public void setFilled(Boolean filled) {
+		this.filled = filled;
+	}
+	public abstract double getArea();
+	public abstract double getPerimeter();
+	public String toString() {
+		return "Shape[color="+color+", filled="+filled+"]";
+	}
 }

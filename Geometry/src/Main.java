@@ -1,14 +1,24 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-	    Shape arr[] = new Shape[3];
-		arr[0] = new Circle(0,0);
-		arr[1] = new Rectangle(0,0,60,70);
-		arr[2] = new Circle(3, 4, 5);
-		Circle s = new Circle(1, 2, 5);
-		System.out.println(arr[1]);
-		System.out.println(arr[2].calcArea());
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		if(n==1) {
+			System.out.println("Enter radius for circle:");
+			double r = in.nextDouble();
+			Circle sh = new Circle(r);
+			System.out.println(sh);
+			System.out.println(sh.getArea()+" "+sh.getPerimeter());
+		}else {
+			System.out.println("Enter length and width for rectangle:");
+			double l = in.nextDouble(),  w = in.nextDouble();
+			Rectangle sh = new Rectangle(l,w);
+			System.out.println(sh);
+			System.out.println(sh.getArea()+" "+sh.getPerimeter());
+		
+		}
 	}
 
 }
